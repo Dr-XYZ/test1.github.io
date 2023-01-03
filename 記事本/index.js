@@ -4,6 +4,7 @@ let time = document.getElementById('time')
 let add = document.getElementById('add')
 let del = document.getElementById('del')
 let list = document.getElementById('list')
+let download = document.getElementById('download')
 
 const listContent=[]
 
@@ -68,3 +69,12 @@ try {
     //偵測到廣告阻擋執行
     alert("偵測到廣告阻擋！！！");
 }
+download.addEventListener('click',  function block_capture() {
+    html2canvas(document.querySelector("#app")).then(function (canvas) {
+        a = document.createElement('a');
+        a.href = canvas.toDataURL("image/jpeg", 1).replace("image/jpeg", "image/octet-stream");
+        a.download = '筆記.jpg';
+        a.click();
+    });
+})
+

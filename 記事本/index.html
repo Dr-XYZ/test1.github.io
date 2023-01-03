@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>20221231備忘錄</title>
     <link rel="stylesheet" href="index.css">
-    
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
 </head>
 
-<body class="body">
+<body class="body" id="body">
   
    
-    <div class="app">
+    <div class="app" id="app">
         <div class="tit">
             <div class="title" >備忘錄</div>
         </div>
@@ -24,8 +25,9 @@
         <input class="input" type="time" id="time">
         <button class="add btn" id="add">新增</button>
         <button class="del btn" id="del">刪除最後一個</button>
+        <button  class="download" id="download">點我擷取筆記</button>
        <div class="list" id="list">
-            
+       
        </div>
     </div>
 
